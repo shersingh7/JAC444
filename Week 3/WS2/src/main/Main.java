@@ -1,3 +1,12 @@
+/*
+Name: Davinder Verma
+Section: NBB
+Student Number: 121802201
+Email: dverma22@myseneca.ca
+Date: 08/06/2021
+Workshop: 2 (TASK-1)
+*/
+
 package main;
 
 import shapes.*;
@@ -63,6 +72,16 @@ public class Main {
                     }
                 }
 
+                //Parallelogram
+                if (name.equals("Parallelogram") && tokens.length == 3) {
+                    try {
+                        shapes[size] = new Parallelogram(Double.parseDouble(tokens[1]), Double.parseDouble(tokens[2]) );
+                        size++;
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,7 +93,7 @@ public class Main {
         {
             if (shapes[i] != null)
             {
-                System.out.println(shapes[i]); //implicitly calls toString() method
+                System.out.println(shapes[i]); //Calls toString() method
             }
 
         }

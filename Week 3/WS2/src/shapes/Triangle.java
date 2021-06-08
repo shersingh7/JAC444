@@ -1,7 +1,15 @@
+/*
+Name: Davinder Verma
+Section: NBB
+Student Number: 121802201
+Email: dverma22@myseneca.ca
+Date: 08/06/2021
+Workshop: 2 (TASK-1)
+*/
+
 package shapes;
 
 import java.text.DecimalFormat;
-import java.util.concurrent.ExecutionException;
 
 public class Triangle implements Shape{
     double s1;
@@ -10,7 +18,7 @@ public class Triangle implements Shape{
 
     public Triangle(double a, double b, double c) throws Exception {
 
-        if((a < (b+c)) && (b < (a+c)) && (c<(a+b)) ){
+        if((a > 0.0) && (b > 0.0) && (c>0.0) && (a + b) > c ){
             this.s1=a;
             this.s2=b;
             this.s3=c;
@@ -21,21 +29,21 @@ public class Triangle implements Shape{
         }
     }
 
-    public double getS1(){return s1;}
+    public double getS1(){return this.s1;}
 
     public void setS1(double a) throws Exception{
         if(a > 0) this.s1 = a;
         else throw new Exception("Invalid side(s)!");
     }
 
-    public double getS2() {return s2;}
+    public double getS2() {return this.s2;}
 
     public void setS2(double b) throws Exception{
         if(b > 0)this.s2 = b;
         else throw new Exception("Invalid side(s)!");
     }
 
-    public double getS3() {return s3;}
+    public double getS3() {return this.s3;}
 
     public void setS3(double c) throws Exception{
         if(c > 0)this.s3 = c;
@@ -43,16 +51,16 @@ public class Triangle implements Shape{
     }
 
     @Override
-    public double perimeter() { return getS1()+ getS2() + getS3();}
+    public double perimeter() { return (getS1()+ getS2() + getS3());}
 
     @Override
     public String toString() {
 
-        DecimalFormat temp = new DecimalFormat("330.0000");
+        DecimalFormat temp = new DecimalFormat("##0.0000");
         return String.format(this.getClass().getSimpleName() +
                 " {s1=" + getS1() +
                 ", s2=" + getS2() +
                 ", s3=" + getS3() +
-                "} perimater = " + temp.format(perimeter()) + "\n");
+                "} perimeter = " + temp.format(perimeter()) + "\n");
     }
 }

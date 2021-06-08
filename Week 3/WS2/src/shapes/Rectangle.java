@@ -1,12 +1,22 @@
+/*
+Name: Davinder Verma
+Section: NBB
+Student Number: 121802201
+Email: dverma22@myseneca.ca
+Date: 08/06/2021
+Workshop: 2 (TASK-1)
+*/
+
 package shapes;
 
 import java.text.DecimalFormat;
-import java.util.concurrent.ExecutionException;
 
 public class Rectangle implements Shape{
 
     double w;
     double h;
+
+    public Rectangle(){this.w = 0.0; this.h = 0.0;}
 
     public double getW() {return w;}
 
@@ -24,7 +34,7 @@ public class Rectangle implements Shape{
 
     public Rectangle(double width, double height) throws Exception{
 
-        if(width > 0 && height > 0){
+        if(width > 0.0 && height > 0.0){
             this.w = width;
             this.h = height;
         }
@@ -33,11 +43,10 @@ public class Rectangle implements Shape{
             throw new Exception("Invalid side!");
         }
 
-
     }
 
     @Override
-    public double perimeter() {return 2 * getH() + getW();}
+    public double perimeter() {return 2 * getH() + 2 * getW();}
 
     @Override
     public String toString() {

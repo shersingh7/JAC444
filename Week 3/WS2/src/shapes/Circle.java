@@ -1,3 +1,12 @@
+/*
+Name: Davinder Verma
+Section: NBB
+Student Number: 121802201
+Email: dverma22@myseneca.ca
+Date: 08/06/2021
+Workshop: 2 (TASK-1)
+*/
+
 package shapes;
 
 import java.text.DecimalFormat;
@@ -36,14 +45,8 @@ public class Circle implements Shape{
     }
 
     public String toString(){
-        DecimalFormat temp = new DecimalFormat("##0.00000");
+        DecimalFormat temp = new DecimalFormat("##0.0000");
         return String.format(this.getClass().getSimpleName()+" {r=" + getR() + "} perimeter = " + temp.format(perimeter()) + "\n" );
     }
-   /* @Override //overrides Object's version of toString method
-    public String toString()
-    {
-        return String.format("Circle {r=" + this.r
-                + "} perimeter = %.6f\n", this.perimeter());
-    }*/
 
 }
