@@ -103,7 +103,7 @@ public class Main {
 
         while( i < shapes.length )
         {
-            //Getting the smallest Triangle
+            //Getting the Smallest Triangle
             if(shapes[i].getClass().getName().contains("Triangle"))
             {
                 if(min == null)
@@ -115,6 +115,7 @@ public class Main {
                     min = shapes[i];
                 }
             }
+
             //Getting the Biggest Circle
             else if (shapes[i].getClass().getName().contains("Circle"))
             {
