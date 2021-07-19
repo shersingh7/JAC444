@@ -1,3 +1,12 @@
+/*
+Name: Davinder Verma
+Section: NBB
+Student Number: 121802201
+Email: dverma22@myseneca.ca
+Date: 16/07/2021
+Workshop: 7
+*/
+
 public class Student {
 
     private String firstName;
