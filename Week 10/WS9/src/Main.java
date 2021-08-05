@@ -10,8 +10,8 @@ Workshop: 9
 public class Main {
     public static void main(String[] args) {
 
-        double[] balance = {1,1,1,1,1,1};
-        String[] currency = {"Dollar(s)", "Pound(s)", "Euro(s)", "Pound(s)","Pound(s)", "Dollar(s)"};
+        double[] balance = {1,2,3};
+        String[] currency = {"Dollar(s)", "Euro(s)", "Pound(s)"};
 
         Shared account = new Shared(0,"");
 
