@@ -7,11 +7,11 @@ public class Car implements Serializable {
     private double mileage;
     private String plate;
 
-    public Car(String model, String color, double mileage, String plate) {
+    public Car(String model, String color, double mileage) {
         this.model = model;
         this.color = color;
         this.mileage = mileage;
-        this.plate = plate;
+        this.plate = "NA";
     }
 
     public String getModel() {
@@ -52,11 +52,9 @@ public class Car implements Serializable {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                ", mileage=" + mileage +
-                ", plate='" + plate + '\'' +
-                '}';
+        return "\n\tModel = " + model +
+                "\n\tColor = " + color +
+                "\n\tMileage = " + mileage +
+                "\n\tPlate = " + plate;
     }
 }
